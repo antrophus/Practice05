@@ -28,8 +28,8 @@ public class BookShop {
 		// (1) 입력된 번호에 맞는 책을 찾아 대여 되었음(상태코드=0)을 체크 합니다.
 		// 코드작성
 		for (int i = 0; i < books.length; i++) {
-			if (books[i].getBookNo() == num) {
-				books[i].rent();
+			if (books[i].getBookNo() == num) {// 입력 받은 번호와 같은 번호의 책을 불러와서
+				books[i].rent(); // book.java의  rent 메소드를 출력한다.
 				break;
 			}
 		}
@@ -42,7 +42,7 @@ public class BookShop {
 
 	// (2)전달받은 배열을 모두 출력하는 메소드
 
-	private static void displayBookInfo(Book[] books) {
+	private static void displayBookInfo(Book[] books) {//Book 배열의 books 변수 i 번째의 print 메소드를 출력
 
 		// 코드작성
 		for (int i = 0; i < books.length; i++) {

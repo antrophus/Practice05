@@ -55,17 +55,17 @@ public class Book {
 
 	// 메소드 일반
 
-	public void rent() {
+	public void rent() { // 메소드 호출시 stateCode를 0으로 변경.
 		stateCode = 0;
 		System.out.println(title + "이(가) 대여 됐습니다.");
 
 	}
 
 	public void print() {
-		String rentState;
-		if (stateCode == 1) {
-			rentState = "재고있음";
-		} else {
+		String rentState; // 값을 입력받을 변수를 설정하고 if문 작성
+		if (stateCode == 1) {// 초기값 재고 있음
+			rentState = "재고있음"; 
+		} else { // rent 메소드 호출하여 stateCode가 0이 되면 "대여중" 출력
 			rentState = "대여중";
 		}
 		System.out.println(bookNo + " 책 제목:" + title + ", 작가:" + author + ", 대여 유무:" + rentState);
